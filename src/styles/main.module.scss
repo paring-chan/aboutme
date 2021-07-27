@@ -7,6 +7,23 @@
 .section2 {
     background: #0080ff;
     color: #fff;
+
+    .skillsGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: center;
+        flex-grow: 1;
+
+        .skillCardContainer {
+            background: #fff;
+            padding: 10px;
+            color: #000;
+        }
+    }
 }
 
 .section3 {
