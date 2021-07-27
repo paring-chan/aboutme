@@ -16,10 +16,12 @@
         margin-left: auto;
         margin-right: auto;
         justify-self: center;
+        margin-top: 20px;
         flex-grow: 1;
 
         .skillCardContainer {
             background: #fff;
+            border-radius: 5px;
             padding: 10px;
             color: #000;
         }
