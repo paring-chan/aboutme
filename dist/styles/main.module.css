@@ -1,0 +1,36 @@
+._section1_5p0u5_1 {
+  background-color: #001122;
+  font-family: "Gugi", cursive;
+  color: #fff;
+}
+
+._section2_5p0u5_7 {
+  background: #0080ff;
+  color: #fff;
+}
+._section2_5p0u5_7 ._skillsGrid_5p0u5_11 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+._section2_5p0u5_7 ._skillsGrid_5p0u5_11 ._skillCardContainer_5p0u5_22 {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000;
+}
+
+._section3_5p0u5_29 {
+  background: #fff;
+  color: #000;
+}
+
+._section_5p0u5_1 {
+  text-align: center;
+}

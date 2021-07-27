@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@fullpage/react-fullpage": "./@fullpage/react-fullpage.js",
+    "clsx": "./clsx.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js"
+  }
+}
