@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import './styles/index.scss'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, fas)
 
 ReactDOM.render(
     <React.StrictMode>
