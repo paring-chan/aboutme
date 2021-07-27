@@ -22,6 +22,12 @@ const Section1 = () => {
                 <IconButton color="inherit" target="_blank" href="https://github.com/pikokr">
                     <FontAwesomeIcon icon={['fab', 'github']}/>
                 </IconButton>
+                <IconButton color="inherit" target="_blank" href="https://youtube.com/c/pikokr">
+                    <FontAwesomeIcon icon={['fab', 'youtube']}/>
+                </IconButton>
+                <IconButton color="inherit" target="_blank" href="https://twitch.tv/pikokr">
+                    <FontAwesomeIcon icon={['fab', 'twitch']}/>
+                </IconButton>
                 <IconButton color="inherit" target="_blank" href="https://discord.com/users/628595345798201355">
                     <FontAwesomeIcon icon={['fab', 'discord']}/>
                 </IconButton>
