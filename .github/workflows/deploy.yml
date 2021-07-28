@@ -1,5 +1,3 @@
-# written by aroxu
-
 name: Deploy Project
 on:
   push:
@@ -22,9 +20,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-build-${{ runner.OS }}-
       - name: Install dependencies
-        run: yarn install --prod --pure-lockfile
+        run: yarn
       - name: Build
-        run: yarn run build
+        run: yarn build
         env:
           NODE_ENV: production
           CI: false
