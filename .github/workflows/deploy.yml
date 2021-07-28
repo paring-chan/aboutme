@@ -1,21 +1,37 @@
-name: Deploy
+# written by aroxu
 
+name: Deploy Project
 on:
-  - push
+  push:
+    branches:
+      - main
 jobs:
-  deploy:
+  update:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          yarn
-          yarn build
-          touch build/.nojekyll
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - uses: actions/checkout@master
+      - name: Set up Node.js
+        uses: actions/setup-node@master
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+          node-version: 14.x
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-build-${{hashFiles('**/yarn.lock')}}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ runner.OS }}-
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+      - name: Build
+        run: yarn run build
+        env:
+          NODE_ENV: production
+          CI: false
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          cname: aroxu.me
+          publish_dir: ./build
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_branch: gh-pages
