@@ -37,6 +37,10 @@ const Section3 = () => {
                         content="배워뒀지만 파랑이가 잘 쓰지는 않는 웹 프레임워크!"
                     />
                     <Skill
+                        title="Nestjs"
+                        content="파랑이가 요즘(?) 많이 쓰는 웹 프레임워크"
+                    />
+                    <Skill
                         title="Phaser 3"
                         content="잘은 모르지만 일단 써본거!"
                     />
