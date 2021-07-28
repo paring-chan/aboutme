@@ -1,14 +1,25 @@
-._section1_5p0u5_1 {
+._section1_z2jvg_1 {
   background-color: #001122;
   font-family: "Gugi", cursive;
   color: #fff;
 }
 
-._section2_5p0u5_7 {
+._section2_z2jvg_7 {
+  background-color: #001122;
+  color: #fff;
+}
+._section2_z2jvg_7 ._aboutGrid_z2jvg_11 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 90vw;
+}
+
+._section3_z2jvg_18 {
   background: #0080ff;
   color: #fff;
 }
-._section2_5p0u5_7 ._skillsGrid_5p0u5_11 {
+._section3_z2jvg_18 ._skillsGrid_z2jvg_22 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
@@ -19,18 +30,18 @@
   margin-top: 20px;
   flex-grow: 1;
 }
-._section2_5p0u5_7 ._skillsGrid_5p0u5_11 ._skillCardContainer_5p0u5_22 {
+._section3_z2jvg_18 ._skillsGrid_z2jvg_22 ._skillCardContainer_z2jvg_33 {
   background: #fff;
   border-radius: 5px;
   padding: 10px;
   color: #000;
 }
 
-._section3_5p0u5_29 {
+._section4_z2jvg_40 {
   background: #fff;
   color: #000;
 }
 
-._section_5p0u5_1 {
+._section_z2jvg_1 {
   text-align: center;
 }
