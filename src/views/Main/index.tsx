@@ -6,6 +6,7 @@ import ProfileImage from '../../assets/images/profile.png'
 import Section1 from './Section1'
 import Section3 from './Section3'
 import Section2 from './Section2'
+import Footer from './Footer'
 
 const MainPage = () => {
     return (
@@ -26,6 +27,7 @@ const MainPage = () => {
                     >
                         3
                     </div>
+                    <Footer />
                 </div>
             )}
         >
