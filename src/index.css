@@ -27,3 +27,7 @@ body {
     background: #000f26;
     color: #fff;
 }
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+}
