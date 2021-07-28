@@ -12,7 +12,7 @@ const Intro = () => {
                 height={150}
                 alt="profile"
             />
-            <h1>파랑이</h1>
+            <h1 style={{ marginTop: 10 }}>파랑이</h1>
             <h4>와아! 파랑이애오!</h4>
         </div>
     )
