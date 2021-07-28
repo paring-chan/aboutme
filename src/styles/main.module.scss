@@ -5,6 +5,17 @@
 }
 
 .section2 {
+    background-color: #001122;
+    color: #fff;
+    .aboutGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 90vw;
+    }
+}
+
+.section3 {
     background: #0080ff;
     color: #fff;
 
@@ -28,7 +39,7 @@
     }
 }
 
-.section3 {
+.section4 {
     background: #fff;
     color: #000;
 }

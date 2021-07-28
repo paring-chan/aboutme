@@ -4,6 +4,7 @@ import styles from '../../styles/main.module.scss'
 import clsx from 'clsx'
 import ProfileImage from '../../assets/images/profile.png'
 import Section1 from './Section1'
+import Section3 from './Section3'
 import Section2 from './Section2'
 
 const MainPage = () => {
@@ -15,6 +16,7 @@ const MainPage = () => {
                 <div id="fullpage-wrapper">
                     <Section1 />
                     <Section2 />
+                    <Section3 />
                     <div
                         className={clsx(
                             'section',
