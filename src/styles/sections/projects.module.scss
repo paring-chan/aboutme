@@ -8,9 +8,9 @@
     width: 100%;
 
     .swiperContainer {
-        background: #fff;
-        color: #000;
         box-sizing: border-box;
         border-radius: 10px;
+        overflow: hidden;
+        background: #000;
     }
 }
