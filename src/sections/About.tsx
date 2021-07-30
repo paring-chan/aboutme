@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const About = () => {
     return (
         <div className={styles.container}>
-            <h1>파랑이는?</h1>
+            <h1 className="font-tmoney-round">파랑이는?</h1>
             <div>
                 <div>
                     그냥 귀여운거 좋아하는{' '}

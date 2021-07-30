@@ -1,0 +1,16 @@
+.container {
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+
+    .swiperContainer {
+        background: #fff;
+        color: #000;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}

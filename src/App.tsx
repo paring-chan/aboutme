@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Mousewheel, Pagination } from 'swiper/core'
 import Intro from './sections/Intro'
 import About from './sections/About'
+import Projects from './sections/Projects'
 
 SwiperCore.use([Mousewheel, Pagination])
 
@@ -21,6 +22,9 @@ const App = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <About />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Projects />
             </SwiperSlide>
         </Swiper>
     )
