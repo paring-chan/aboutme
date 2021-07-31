@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/sections/projects.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Project from '../components/Project'
+import Button from '../components/Button'
 
 const Projects = () => {
     return (
@@ -20,6 +21,22 @@ const Projects = () => {
                             title="UniqueBots"
                             brief="디스코드 봇 리스트"
                             image="https://cdn.discordapp.com/attachments/761800911604940801/798431471362113556/image0.png"
+                            actions={
+                                <>
+                                    <Button
+                                        text="보러가기"
+                                        href="https://uniquebots.kr"
+                                        target="_blank"
+                                        color="255,255,255"
+                                    />
+                                    <Button
+                                        text="깃허브"
+                                        href="https://github.com/pikokr/uniquebots"
+                                        target="_blank"
+                                        color="255,255,255"
+                                    />
+                                </>
+                            }
                         />
                     </SwiperSlide>
                     <SwiperSlide>2</SwiperSlide>

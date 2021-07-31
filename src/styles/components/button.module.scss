@@ -1,16 +1,16 @@
 .container {
     padding: 5px 10px;
-    color: #005eff;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color ease-out 0.25s, transform ease-out 0.25s;
     display: flex;
     gap: 10px;
+    color: rgb(var(--color));
     justify-content: center;
     align-items: center;
     text-decoration: none;
     &:hover {
-        background-color: rgba(18, 105, 255, 0.3);
+        background-color: rgba(var(--color), 0.3);
     }
     &:active {
         transform: scale(0.95);
