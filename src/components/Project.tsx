@@ -5,9 +5,16 @@ type ProjectProps = {
     brief: string
     image?: string
     bg?: string
+    actions?: React.ReactNode
 }
 
-const Project: React.FC<ProjectProps> = ({ bg, title, brief, image }) => {
+const Project: React.FC<ProjectProps> = ({
+    bg,
+    title,
+    brief,
+    image,
+    actions,
+}) => {
     return (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <div
@@ -59,6 +66,9 @@ const Project: React.FC<ProjectProps> = ({ bg, title, brief, image }) => {
                 )}
                 <h1 style={{ fontSize: 55 }}>{title}</h1>
                 <div style={{ fontSize: 30 }}>{brief}</div>
+                {actions && (
+                    <div style={{ display: 'flex', gap: 10 }}>{actions}</div>
+                )}
             </div>
         </div>
     )
