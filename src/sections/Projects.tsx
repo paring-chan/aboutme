@@ -39,8 +39,34 @@ const Projects = () => {
                             }
                         />
                     </SwiperSlide>
-                    <SwiperSlide>2</SwiperSlide>
-                    <SwiperSlide>3</SwiperSlide>
+                    <SwiperSlide>
+                        <Project
+                            title="Command.TS"
+                            brief="discord.js 커맨드 프레임워크"
+                            actions={
+                                <>
+                                    <Button
+                                        text="깃허브"
+                                        href="https://github.com/pikokr/command.ts-v2"
+                                        target="_blank"
+                                        color="255,255,255"
+                                    />
+                                    <Button
+                                        text="NPM"
+                                        href="https://npmjs.com/command.ts"
+                                        target="_blank"
+                                        color="255,255,255"
+                                    />
+                                    <Button
+                                        text="DOCS"
+                                        href="https://command-ts.pikokr.dev"
+                                        target="_blank"
+                                        color="255,255,255"
+                                    />
+                                </>
+                            }
+                        />
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div>

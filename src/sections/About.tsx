@@ -19,6 +19,7 @@ const About = () => {
                     style={{
                         display: 'flex',
                         gap: 10,
+                        marginTop: 10,
                         justifyContent: 'center',
                     }}
                 >
