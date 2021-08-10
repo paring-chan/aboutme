@@ -13,7 +13,7 @@ const About = () => {
                     <span style={{ textDecoration: 'line-through' }}>
                         좀 이상한
                     </span>{' '}
-                    개발자애오!
+                    개발자애오! 히힛!
                 </div>
                 <div
                     style={{
