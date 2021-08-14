@@ -14,6 +14,9 @@ const Credits = () => {
                 href="https://discord.gg/EkFHRG4TZZ"
                 target="_blank"
             />
+            <h1>
+                2021 © pikokr
+            </h1>
         </div>
     )
 }
