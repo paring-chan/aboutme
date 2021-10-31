@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                 <DesktopOnly style={{ flexGrow: 1 }} />
                 <MobileOnly>
                     <MobileHeaderContainer>
-                        <div>{title}</div>
+                        <Title to="/">{title}</Title>
                         <div style={{ flexGrow: 1 }} />
                         <MenuButton onClick={() => setMobileOpen(!mobileOpen)}>
                             <FontAwesomeIcon icon={['fas', 'bars']} />

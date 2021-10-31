@@ -8,7 +8,7 @@ import blitz from '../assets/logos/blitz.svg'
 import nest from '../assets/logos/nest.svg'
 import kotlin from '../assets/logos/kotlin.png'
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +116,17 @@ const SkillItem: React.FC<{ title: string; logo?: string; desc: string }> = ({
 
 const Skills: React.FC = () => {
     return (
-        <Container>
+        <Container
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1,
+            }}
+            exit={{
+                opacity: 0,
+            }}
+        >
             <Title
                 initial={{
                     y: -20,
