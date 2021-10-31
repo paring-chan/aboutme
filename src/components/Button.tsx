@@ -1,36 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import styles from '../styles/components/button.module.scss'
+import styled from 'styled-components'
 
-type ButtonProps = {
-    text: React.ReactNode
-    icon?: React.ReactNode
-    disableLink?: boolean
-    color?: string
-}
-
-const Button: React.FC<ButtonProps & React.AllHTMLAttributes<any>> = ({
-    icon,
-    text,
-    disableLink,
-    color = '0, 94, 255',
-    style = {},
-    ...props
-}) => {
-    return (
-        <a
-            {...props}
-            className={styles.container}
-            // @ts-ignore
-            style={{ '--color': color, ...style }}
-        >
-            {icon}
-            {!disableLink && (
-                <FontAwesomeIcon icon={['fas', 'external-link-alt']} />
-            )}
-            <div>{text}</div>
-        </a>
-    )
-}
+const Button = styled.a`
+    cursor: pointer;
+    text-decoration: none;
+    padding: 7px 25px;
+    min-width: 200px;
+    background: var(--theme-primary);
+    color: var(--primary-content-color);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+`
 
 export default Button

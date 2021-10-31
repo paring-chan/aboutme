@@ -1,36 +1,15 @@
 import React from 'react'
-import 'swiper/swiper.scss'
-import 'swiper/components/pagination/pagination.min.css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Mousewheel, Pagination } from 'swiper/core'
-import Intro from './sections/Intro'
-import About from './sections/About'
-import Projects from './sections/Projects'
-import Credits from './sections/Credits'
-
-SwiperCore.use([Mousewheel, Pagination])
+import { Route, Switch } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './views/Home/index'
 
 const App = () => {
     return (
-        <Swiper
-            mousewheel
-            direction="vertical"
-            style={{ height: '100vh' }}
-            pagination={true}
-        >
-            <SwiperSlide>
-                <Intro />
-            </SwiperSlide>
-            <SwiperSlide>
-                <About />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Projects />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Credits />
-            </SwiperSlide>
-        </Swiper>
+        <Layout>
+            <Switch>
+                <Route exact path="/" component={Home} />
+            </Switch>
+        </Layout>
     )
 }
 

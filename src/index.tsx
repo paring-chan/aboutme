@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import './styles/index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -10,9 +12,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, fab)
 
 ReactDOM.render(
-    <React.StrictMode>
+    <BrowserRouter>
         <App />
-    </React.StrictMode>,
+    </BrowserRouter>,
     document.getElementById('root'),
 )
 
