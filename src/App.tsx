@@ -13,7 +13,7 @@ const App = () => {
                     <TransitionGroup>
                         <CSSTransition
                             key={location.key}
-                            timeout={1000}
+                            timeout={500}
                             classNames="page-transition"
                         >
                             <Switch location={location}>
