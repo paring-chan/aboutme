@@ -40,9 +40,11 @@ const ContentSpacer = styled.div`
     }
 `
 
-const Title = styled.div`
+const Title = styled(Link)`
     font-weight: 600;
     font-size: 26px;
+    color: var(--primary-content-color);
+    text-decoration: none;
 `
 
 const HeaderLink = styled(Link)`
@@ -96,7 +98,7 @@ const Header: React.FC = () => {
         <Container mobileOpen={mobileOpen}>
             <ContentSpacer>
                 <DesktopOnly>
-                    <Title>{title}</Title>
+                    <Title to="/">{title}</Title>
                 </DesktopOnly>
                 <DesktopOnly style={{ flexGrow: 1 }} />
                 <MobileOnly>

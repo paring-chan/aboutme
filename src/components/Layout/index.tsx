@@ -13,7 +13,8 @@ const Main = styled.div`
 
 const Layout: React.FC = ({ children }) => {
     return (
-        <Container>
+        <Container id="layout">
+            <div id="slide" />
             <Header />
             <Main>{children}</Main>
         </Container>
