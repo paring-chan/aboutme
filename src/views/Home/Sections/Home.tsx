@@ -23,7 +23,7 @@ const Description = styled.h2`
 
 const HomeSection: React.FC = () => {
     return (
-        <FirstSectionContainer>
+        <FirstSectionContainer id="home-section-home">
             <Title>파랑이</Title>
             <Description>Full-Stack Developer</Description>
             <Button>더 알아보기</Button>
