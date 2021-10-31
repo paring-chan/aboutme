@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import Home from './views/Home'
 import NotFound from './views/NotFound'
 import { AnimatePresence } from 'framer-motion'
+import Projects from './views/Projects'
+import Skills from './views/Skills'
 
 const App = () => {
     return (
@@ -13,6 +15,12 @@ const App = () => {
                     <AnimatePresence exitBeforeEnter>
                         <Switch location={location} key={location.pathname}>
                             <Route exact path="/" component={Home} />
+                            <Route exact path="/skills" component={Skills} />
+                            <Route
+                                exact
+                                path="/projects"
+                                component={Projects}
+                            />
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>
