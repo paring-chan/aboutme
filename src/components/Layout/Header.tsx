@@ -33,6 +33,7 @@ const ContentSpacer = styled.div`
     margin-left: auto;
     margin-right: auto;
     gap: 30px;
+    overflow: hidden;
 
     @media (max-width: 768px) {
         flex-direction: column;
