@@ -10,9 +10,8 @@ import kotlin from '../assets/logos/kotlin.png'
 
 const Container = styled(motion.div)`
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 60px;
     background: var(--theme-primary);
     color: var(--primary-content-color);
     min-height: calc(100vh - var(--header-height));
