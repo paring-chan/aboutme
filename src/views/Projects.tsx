@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import styled from 'styled-components'
+import SectionTitle from '../components/SectionTitle'
 
 const Container = styled(motion.div)`
     display: flex;
@@ -11,30 +12,10 @@ const Container = styled(motion.div)`
     gap: 30px;
 `
 
-const Title = styled(motion.div)`
-    font-size: 40px;
-    font-weight: bold;
-`
-
 const Projects: React.FC = () => {
     return (
         <Container>
-            <Title
-                initial={{
-                    y: -20,
-                    opacity: 0,
-                }}
-                animate={{
-                    y: 0,
-                    opacity: 1,
-                }}
-                exit={{
-                    y: -10,
-                    opacity: 0,
-                }}
-            >
-                Projects
-            </Title>
+            <SectionTitle t="Projects" />
         </Container>
     )
 }

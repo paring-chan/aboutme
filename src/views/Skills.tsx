@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import ts from '../assets/logos/typescript.png'
 import react from '../assets/logos/react.png'
 import next from '../assets/logos/next.svg'
 import blitz from '../assets/logos/blitz.svg'
 import nest from '../assets/logos/nest.svg'
 import kotlin from '../assets/logos/kotlin.png'
+import SectionTitle from '../components/SectionTitle'
 
 const Container = styled(motion.div)`
     display: flex;
@@ -38,11 +39,12 @@ const SkillList = styled(motion.div)`
     }
 `
 
-const skillContainerVariants = {
+const skillContainerVariants: Variants = {
     hidden: {},
     show: {
         transition: {
             staggerChildren: 0.05,
+            delayChildren: 0.5,
         },
     },
     exit: {
@@ -113,33 +115,8 @@ const SkillItem: React.FC<{ title: string; logo?: string; desc: string }> = ({
 
 const Skills: React.FC = () => {
     return (
-        <Container
-            initial={{
-                opacity: 0,
-            }}
-            animate={{
-                opacity: 1,
-            }}
-            exit={{
-                opacity: 0,
-            }}
-        >
-            <Title
-                initial={{
-                    y: -20,
-                    opacity: 0,
-                }}
-                animate={{
-                    y: 0,
-                    opacity: 1,
-                }}
-                exit={{
-                    y: -10,
-                    opacity: 0,
-                }}
-            >
-                Skills
-            </Title>
+        <Container>
+            <SectionTitle t="Skills" />
             <SkillList
                 variants={skillContainerVariants}
                 animate="show"
