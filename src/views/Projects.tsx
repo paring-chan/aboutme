@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
                     opacity: 0,
                 }}
             >
-                Skills
+                Projects
             </Title>
         </Container>
     )
