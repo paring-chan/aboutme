@@ -18,11 +18,6 @@ const Container = styled(motion.div)`
     gap: 30px;
 `
 
-const Title = styled(motion.div)`
-    font-size: 40px;
-    font-weight: bold;
-`
-
 const SkillList = styled(motion.div)`
     display: grid;
     max-width: 1200px;
