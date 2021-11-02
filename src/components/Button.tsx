@@ -5,8 +5,8 @@ const Button = styled.a`
     text-decoration: none;
     padding: 7px 25px;
     min-width: 200px;
-    background: var(--theme-primary);
-    color: var(--primary-content-color);
+    background: #fff;
+    color: var(--theme-primary);
     text-align: center;
     border-radius: 12px;
     font-size: 24px;

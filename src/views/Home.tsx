@@ -26,7 +26,7 @@ const Title = styled.h2`
 const Description = styled.h2`
     font-size: 40px;
     text-align: center;
-    color: var(--description-white-color);
+    color: var(--theme-primary-description-color);
 `
 
 const Home: React.FC = () => {

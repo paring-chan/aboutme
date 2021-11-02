@@ -12,8 +12,6 @@ const Container = styled(motion.div)`
     display: flex;
     align-items: center;
     padding-top: 60px;
-    background: var(--theme-primary);
-    color: var(--primary-content-color);
     min-height: calc(100vh - var(--header-height));
     flex-direction: column;
     gap: 30px;

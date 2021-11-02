@@ -4,11 +4,24 @@
     user-select: none;
     box-sizing: border-box;
 }
+
+:root {
+    --theme-primary: #4E7EFF;
+    --primary-content-color: #fff;
+
+    --theme-primary-description-color: #eeeeee;
+
+    --header-height: 60px;
+}
+
+
 body {
     margin: 0;
     font-family: 'HancomMalangMalang', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: var(--theme-primary);
+    color: var(--primary-content-color);
 }
 
 h1,
@@ -23,13 +36,4 @@ h6 {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-}
-
-:root {
-    --theme-primary: #4E7EFF;
-    --primary-content-color: #fff;
-
-    --description-white-color: #2C2C2C;
-
-    --header-height: 60px;
 }
