@@ -13,12 +13,19 @@ const App = () => {
             <Route
                 render={({ location }) => (
                     <AnimatePresence exitBeforeEnter>
-                        <Switch location={location} key={location.pathname}>
+                        <Switch
+                            location={location}
+                            key={
+                                location.pathname.startsWith('/projects')
+                                    ? '/projects'
+                                    : location.pathname
+                            }
+                        >
                             <Route exact path="/" component={Home} />
                             <Route exact path="/skills" component={Skills} />
                             <Route
                                 exact
-                                path="/projects"
+                                path={['/projects', '/projects/:id']}
                                 component={Projects}
                             />
                             <Route component={NotFound} />

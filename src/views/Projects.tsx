@@ -1,5 +1,11 @@
-import { AnimateSharedLayout, motion, Variants } from 'framer-motion'
+import {
+    AnimatePresence,
+    AnimateSharedLayout,
+    motion,
+    Variants,
+} from 'framer-motion'
 import React from 'react'
+import { Link, useHistory, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import SectionTitle from '../components/SectionTitle'
 import { ProjectItem, projects } from '../projects'
@@ -40,10 +46,113 @@ const ProjectCard: React.FC<{
     item: ProjectItem
 }> = ({ id, item }) => {
     return (
-        <ProjectContainer variants={itemVariants} layoutId={id}>
-            <ProjectTitle>{item.title}</ProjectTitle>
-            <ProjectDescription>{item.description}</ProjectDescription>
-        </ProjectContainer>
+        <Link to={`/projects/${id}`} style={{ textDecoration: 'none' }}>
+            <ProjectContainer
+                variants={itemVariants}
+                layoutId={`projects-${id}`}
+            >
+                <ProjectTitle layoutId={`project-title-${id}`}>
+                    {item.title}
+                </ProjectTitle>
+                <ProjectDescription layoutId={`project-description-${id}`}>
+                    {item.description}
+                </ProjectDescription>
+            </ProjectContainer>
+        </Link>
+    )
+}
+
+const Overlay = styled(motion.div)`
+    z-index: 100;
+    position: fixed;
+    will-change: opacity;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 990px;
+
+    a {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        left: 50%;
+        background: rgba(0, 0, 0, 0.8);
+
+        transform: translateX(-50%);
+    }
+`
+
+const DetailsContainer = styled.div`
+    z-index: 101;
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+    padding: 40px 0;
+`
+
+const DetailsContent = styled(motion.div)`
+    position: relative;
+    background: #fff;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+    overflow: hidden;
+    pointer-events: none;
+    padding: 20px;
+    border-radius: 20px;
+`
+
+const DetailsContentContainer = styled(motion.div)``
+
+const ProjectDetails: React.FC<{ id: string }> = ({ id }) => {
+    const item = projects[parseInt(id)]
+
+    return (
+        <>
+            <Overlay
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.15 } }}
+                transition={{ duration: 0.2, delay: 0.15 }}
+                style={{ pointerEvents: 'auto' }}
+            >
+                <Link to="/projects" />
+            </Overlay>
+            <DetailsContainer>
+                <DetailsContent layoutId={'projects-' + id}>
+                    <ProjectTitle layoutId={`project-title-${id}`}>
+                        {item.title}
+                    </ProjectTitle>
+                    <ProjectDescription layoutId={`project-description-${id}`}>
+                        {item.description}
+                    </ProjectDescription>
+                    <DetailsContentContainer
+                        initial={{ height: 0 }}
+                        animate={{ height: '100%' }}
+                        exit={{ height: 0 }}
+                        style={{ overflow: 'hidden' }}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Aliquid, blanditiis consequatur debitis delectus,
+                        dignissimos dolore enim eveniet ex fugiat, harum illo
+                        illum nam nobis non odit pariatur quas totam veritatis.
+                    </DetailsContentContainer>
+                </DetailsContent>
+            </DetailsContainer>
+        </>
     )
 }
 
@@ -75,10 +184,16 @@ const projectsContainerVariants: Variants = {
 }
 
 const Projects: React.FC = () => {
+    const {
+        params: { id },
+    } = useRouteMatch<{ id?: string }>()
+
+    const project = projects[parseInt(id!)]
+
     return (
         <Container>
             <SectionTitle t="Projects" />
-            <AnimateSharedLayout type="crossfade">
+            <AnimateSharedLayout type="switch">
                 <ItemsContainer
                     variants={projectsContainerVariants}
                     initial="hidden"
@@ -86,9 +201,16 @@ const Projects: React.FC = () => {
                     exit="exit"
                 >
                     {projects.map((x, i) => (
-                        <ProjectCard item={x} key={i} id={i.toString()} />
+                        <ProjectCard
+                            item={x}
+                            key={i.toString()}
+                            id={i.toString()}
+                        />
                     ))}
                 </ItemsContainer>
+                <AnimatePresence>
+                    {project && <ProjectDetails key={id!} id={id!} />}
+                </AnimatePresence>
             </AnimateSharedLayout>
         </Container>
     )
