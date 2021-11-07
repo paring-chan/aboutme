@@ -6,6 +6,7 @@ import NotFound from './views/NotFound'
 import { AnimatePresence } from 'framer-motion'
 import Projects from './views/Projects'
 import Skills from './views/Skills'
+import ProjectDetails from './views/ProjectDetails'
 
 const App = () => {
     return (
@@ -20,6 +21,11 @@ const App = () => {
                                 exact
                                 path="/projects"
                                 component={Projects}
+                            />
+                            <Route
+                                exact
+                                path="/projects/:id"
+                                component={ProjectDetails}
                             />
                             <Route component={NotFound} />
                         </Switch>
