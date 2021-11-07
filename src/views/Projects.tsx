@@ -1,11 +1,6 @@
-import {
-    AnimatePresence,
-    AnimateSharedLayout,
-    motion,
-    Variants,
-} from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import React from 'react'
-import { Link, useHistory, useRouteMatch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import SectionTitle from '../components/SectionTitle'
 import { ProjectItem, projects } from '../projects'
@@ -90,12 +85,6 @@ const projectsContainerVariants: Variants = {
 }
 
 const Projects: React.FC = () => {
-    const {
-        params: { id },
-    } = useRouteMatch<{ id?: string }>()
-
-    const project = projects[parseInt(id!)]
-
     return (
         <Container>
             <SectionTitle t="Projects" />
